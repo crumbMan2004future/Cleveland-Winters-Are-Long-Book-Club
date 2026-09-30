@@ -4,7 +4,7 @@
 window.CLUB_CONFIG = {
   // Paste your Google Apps Script web app URL here (see README).
   // Leave it empty to run in demo mode: everything is saved only in your own browser.
-  apiUrl: '',
+  apiUrl: https://script.google.com/macros/s/AKfycbypiIhmM7UHJ92sds0t8BiY3JPq1Yq1YdOOhlrClxFUfJOzPAUTQl6EIZ1JPrgeR7rnXw/exec,
 
   clubName: 'Lake Effect Book Club',
   intro: 'A Cleveland book club for the long winter. One book a month, picked by shaking the snow globe.',
