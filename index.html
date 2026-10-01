@@ -21,7 +21,7 @@
   <h1 class="wordart" id="wordart">Lake Effect Book Club</h1>
   <p class="subtitle">~*~ The OFFICIAL Home Page of Cleveland's Coziest Book Club ~*~</p>
   <marquee class="ticker" scrollamount="5">
-    *** WELCOME TO THE LAKE EFFECT BOOK CLUB HOME PAGE!!! *** WE ARE READING <b>STONER</b> BY JOHN WILLIAMS *** PLAY <b>PIZZA PAGES</b> AND EARN PIZZA FOR READING!!! *** BUNDLE UP, IT'S COLD OUT THERE *** THANK YOU FOR VISITING!!! ***
+    *** WELCOME TO THE LAKE EFFECT BOOK CLUB HOME PAGE!!! *** WE ARE READING <b>STONER</b> BY JOHN WILLIAMS *** LEAVE YOUR <b>READING NOTES</b> IN THE GUESTBOOK!!! *** PLAY <b>PIZZA PAGES</b> AND EARN PIZZA FOR READING!!! *** BUNDLE UP, IT'S COLD OUT THERE *** THANK YOU FOR VISITING!!! ***
   </marquee>
 </div>
 
@@ -33,6 +33,8 @@
       <p class="box-title">~ NAVIGATION ~</p>
       <a href="#meeting">&raquo; Next Meeting</a>
       <a href="#book">&raquo; Our Book</a>
+      <a href="#notes">&raquo; Reading Notes</a>
+      <a href="#hall">&raquo; Hall of Fame</a>
       <a href="#members">&raquo; Members</a>
       <a href="#pizza">&raquo; PIZZA PAGES <span class="new">NEW!</span></a>
       <a href="#links">&raquo; Cool Links</a>
@@ -67,7 +69,7 @@
       <p>Welcome to our little corner of the <b>World Wide Web</b>! This is the place to find out when we're meeting, what we're reading, and who's in the club. Please make yourself at home, and remember: <i>a book a month keeps the cabin fever away!</i></p>
       <p>Don't forget to play <a href="#pizza"><b>PIZZA PAGES</b></a> at the bottom of the page. Read for 5 minutes and earn a slice. That's the deal!!</p>
       <!-- EDIT: change the webmaster's name below if you like -->
-      <p class="signed">~ Mr. Clam, Webmaster &amp; Retired 8th Grade English Teacher &#127822;</p>
+      <p class="signed">~ Mrs. Kowalski, Webmaster &amp; Retired 8th Grade English Teacher &#127822;</p>
     </div>
 
     <hr class="rainbow">
@@ -90,7 +92,7 @@
       <!-- ============ END OF MEETING SECTION ============ -->
 
       <p class="countdown" id="countdown"></p>
-      <p class="tiny">Bring snacks. Bring your book. Bring your enthusiasm for reading!</p>
+      <p class="tiny">Bring snacks. Bring your book. Bring a friend (ask first)!</p>
     </div>
 
     <hr class="rainbow">
@@ -139,6 +141,75 @@ To love that well which thou must leave ere long.</blockquote>
 
     <hr class="rainbow">
 
+    <!-- ======================= READING NOTES ======================= -->
+    <div class="box notes-box" id="notes">
+      <h2>&#9997;&#65039; READING NOTES &#9997;&#65039;</h2>
+      <p class="center">What everybody is thinking about <b><i id="notesBookTitle">our book</i></b> so far. Add yours as you read! <span id="notesCount"></span></p>
+
+      <!-- ======================================================
+           EDIT READING NOTES SETUP (one time only, see README)
+           Paste ONLY the link, starting with https://
+           data-form = your Google Form's link
+           data-csv  = your Sheet's "Publish to web" CSV link
+           ====================================================== -->
+      <div id="notesConfig"
+           data-form="PASTE-YOUR-GOOGLE-FORM-LINK-HERE"
+           data-csv="PASTE-YOUR-PUBLISHED-CSV-LINK-HERE"></div>
+
+      <!-- ============ END OF READING NOTES SETUP ============ -->
+
+      <div id="notesArea">
+        <div class="win">
+          <div class="win-title"><span>&#128221; Leave_A_Note.exe</span><span class="win-btns" aria-hidden="true">_ &#9633; &times;</span></div>
+          <div class="win-body" id="noteForm"></div>
+        </div>
+        <p class="tiny center" id="formFallback"></p>
+        <p class="thanks" id="noteThanks" hidden>THANK YOU!!! Your note will show up below in about 5 minutes. (The Internet is slow!!)</p>
+
+        <p class="gb-head"><span class="blink">&#9733;</span> THE GUESTBOOK <span class="blink">&#9733;</span></p>
+        <div class="gb-list" id="notesList"><p class="center"><i>Loading notes&hellip; please wait&hellip;</i></p></div>
+        <p class="tiny center">Looking for notes on books we already finished? They live in the <a href="#hall">Hall of Fame</a>!</p>
+      </div>
+    </div>
+
+    <hr class="rainbow">
+
+    <!-- ======================= HALL OF FAME ======================= -->
+    <div class="box hall" id="hall">
+      <h2>&#127942; HALL OF FAME &#127942;</h2>
+      <p class="center">Every book we've finished, with our <b>final group rating</b> and everybody's notes!</p>
+
+      <!-- ======================================================
+           EDIT BOOK HISTORY & RATINGS  (once a month)
+           One line per book, NEWEST BOOK AT THE TOP.
+
+           data-start   = the day we started it (YEAR-MONTH-DAY)
+           data-author  = who wrote it
+           data-rating  = our final group rating out of 5
+                          (halves are fine, like 3.5). Leave it
+                          empty "" until we've voted.
+           data-verdict = a short one-liner (optional). Don't use
+                          double quote marks (") inside it.
+
+           WHEN WE FINISH A BOOK:
+             1. Fill in its data-rating (and data-verdict).
+             2. Add the NEXT book as a new line at the top.
+           It moves into the Hall of Fame automatically, and the
+           Reading Notes switch over to the new book.
+           ====================================================== -->
+      <ul id="bookHistory" hidden>
+        <li data-start="2026-09-01" data-author="John Williams" data-rating="" data-verdict="">Stoner</li>
+        <!-- Example of a finished book (copy this pattern):
+        <li data-start="2026-08-01" data-author="Susanna Clarke" data-rating="4.5" data-verdict="Weird, wonderful, and full of statues.">Piranesi</li>
+        -->
+      </ul>
+      <!-- ============ END OF BOOK HISTORY ============ -->
+
+      <div id="hallList"><p class="center"><i>Dusting off the trophy case&hellip;</i></p></div>
+    </div>
+
+    <hr class="rainbow">
+
     <!-- ======================= MEMBERS ======================= -->
     <div class="box" id="members">
       <h2>&#128101; MEET THE MEMBERS &#128101;</h2>
@@ -152,13 +223,10 @@ To love that well which thou must leave ere long.</blockquote>
            their whole line.
            ====================================================== -->
       <ul class="roster" id="memberList">
-        <li>Loren</li>
-        <li>Jon</li>
-        <li>Jason</li>
-        <li>Michael</li>
-        <li>Adam</li>
-        <li>Zac</li>
-        <li>Tim</li>
+        <li>Member Name #1</li>
+        <li>Member Name #2</li>
+        <li>Member Name #3</li>
+        <li>Member Name #4</li>
       </ul>
       <!-- ============ END OF MEMBER LIST ============ -->
 
@@ -217,5 +285,6 @@ To love that well which thou must leave ere long.</blockquote>
 <script src="library.js"></script>
 <script src="site.js"></script>
 <script src="game.js"></script>
+<script src="notes.js"></script>
 </body>
 </html>

@@ -1,6 +1,6 @@
 # Lake Effect Book Club ~ Home Page
 
-Six files, no folders, no Google Sheet needed. Upload all six to the top level of your GitHub repository (replace the old index.html and style.css when GitHub asks). Your old app.js, store.js, seed.js and config.js aren't used anymore, so you can delete them.
+Seven files, no folders. Upload all seven to the top level of your GitHub repository (replace the old index.html and style.css when GitHub asks). Your old app.js, store.js, seed.js and config.js aren't used anymore, so you can delete them.
 
 ## How to edit (on GitHub)
 
@@ -29,3 +29,43 @@ When you're done, click **Commit changes**. The site updates in a minute or two.
 - Slices are saved in each person's own browser (there's no shared leaderboard).
 - Want to try it fast? Add `#pizzatest` to the end of the address and reload: 15-second rounds, nothing saved.
 - Add more books in **library.js**: copy one `{ ... }` block and paste in any public domain text.
+
+## Reading Notes setup (one time, about 10 minutes)
+
+Notes are written in a Google Form, saved in a Google Sheet, and shown on the site guestbook-style.
+
+**1. Make the form.** Go to forms.google.com and start a blank form. Add these questions (the wording can vary a little):
+
+- **Your name**: Short answer, not required
+- **Your thoughts**: Paragraph, required
+- **How far in are you?**: Multiple choice (Just started / About a quarter / Halfway / Three-quarters / Finished), not required
+- **Spoilers?**: Checkboxes with one option, "Yes, this has spoilers", not required
+
+**2. Check two settings** (Settings tab, Responses section). These matter, because the responses become public on your site:
+
+- **Collect email addresses: Do not collect.** Otherwise people's emails would be published.
+- **Limit to 1 response: off**, so nobody has to sign in to Google.
+
+**3. Connect a Sheet.** Responses tab → **Link to Sheets** → create a new spreadsheet.
+
+**4. Publish the Sheet as CSV.** In that spreadsheet: File → Share → **Publish to web**. Pick the **Form Responses 1** tab (not "Entire document") and **Comma-separated values (.csv)**, click Publish, and copy the link.
+
+**5. Get the form's link.** Back in the form, click **Publish** if you see that button, then copy the responder link (the Send button → link icon also works).
+
+**6. Paste both links into index.html.** Search for `EDIT READING NOTES SETUP` and replace the two PASTE-... placeholders, keeping the quote marks around each link.
+
+## Finishing a book (Hall of Fame)
+
+In index.html, search for `EDIT BOOK HISTORY`. Every book gets one line, newest at the top:
+
+    <li data-start="2026-11-05" data-author="Susanna Clarke" data-rating="" data-verdict="">Piranesi</li>
+    <li data-start="2026-09-01" data-author="John Williams" data-rating="4.5" data-verdict="Quietly devastating.">Stoner</li>
+
+When the club finishes a book:
+
+1. On that book's line, fill in `data-rating` (out of 5, halves OK, or something like 8/10) and, if you like, a one-line `data-verdict`. Don't use double quote marks inside the verdict.
+2. Add the next book as a new line at the top, with the day you started it.
+
+The finished book moves into the Hall of Fame with its dates, gold-star rating, verdict and every note people left. The Reading Notes section switches to the new book. Notes are filed under whichever book was current on the day they were written. Also update the Book of the Month section for the new book.
+
+**Good to know:** new notes take about 5 minutes to appear (that's Google, not you). To remove a note, delete its row in the spreadsheet.

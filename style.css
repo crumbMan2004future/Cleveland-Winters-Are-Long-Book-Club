@@ -168,6 +168,44 @@ hr.rainbow {
 .questions { margin: 0; }
 .questions li { margin-bottom: 4px; }
 
+/* reading notes */
+.notes-box { background: #f4fff0; }
+.win { border: 3px outset #dfdfdf; background: #c0c0c0; max-width: 680px; margin: 10px auto 4px; }
+.win-title { display: flex; justify-content: space-between; align-items: center; padding: 3px 6px; background: linear-gradient(90deg, #000080, #1084d0); color: #fff; font: bold 14px Arial, sans-serif; }
+.win-btns { letter-spacing: 6px; }
+.win-body { background: #fff; border: 2px inset #dfdfdf; margin: 4px; }
+.win-body iframe { display: block; width: 100%; height: 760px; border: 0; }
+.win-body p { margin: 16px; }
+.big-link { font: bold 20px 'Comic Sans MS', 'Comic Neue', cursive; }
+.thanks { text-align: center; font: bold 18px 'Comic Sans MS', 'Comic Neue', cursive; color: #008000; background: #ffffcc; border: 2px dashed #008000; padding: 8px; }
+.gb-head { text-align: center; margin: 18px 0 8px; font: bold 22px 'Comic Sans MS', 'Comic Neue', cursive; color: #800080; }
+.gb-entry { padding: 4px 0; }
+.gb { border-collapse: collapse; width: 100%; }
+.gb th { width: 90px; text-align: right; vertical-align: top; padding: 3px 10px 3px 0; color: #800080; font-family: 'Comic Sans MS', 'Comic Neue', cursive; }
+.gb td { padding: 3px 0; vertical-align: top; }
+.gb-text, .spoiler-text { white-space: pre-wrap; overflow-wrap: anywhere; }
+.gb-hr { border: 0; border-top: 2px dotted #800080; margin: 8px 0; }
+.spoiler .spoiler-text { filter: blur(6px); user-select: none; }
+.spoiler.open .spoiler-text { filter: none; user-select: auto; }
+.spoiler-btn { margin-top: 6px; }
+.past { margin: 6px 0; padding: 6px 10px; background: #fff; border: 2px outset #ccc; }
+.past summary { cursor: pointer; font: bold 18px 'Comic Sans MS', 'Comic Neue', cursive; color: #0000aa; }
+
+/* hall of fame */
+.hall { background: #fffaf0; }
+.trophy { display: grid; grid-template-columns: 54px 1fr; gap: 16px; padding: 14px; margin: 0 0 14px; background: #fff; border: 3px outset #e0c060; box-shadow: 4px 4px 0 #c8a600; }
+.spine { width: 54px; height: 150px; align-self: start; border: 3px solid #000; box-shadow: 4px 4px 0 #000; display: flex; align-items: center; justify-content: center; overflow: hidden; padding: 8px 0; }
+.spine span { writing-mode: vertical-rl; color: #ffe08a; font: 11px/1.2 'Press Start 2P', 'Courier New', monospace; max-height: 100%; overflow: hidden; }
+.trophy-body p { margin: 0 0 4px; }
+.trophy-title { font: bold 26px 'Comic Sans MS', 'Comic Neue', cursive; color: #000080; }
+.trophy-author { font-style: italic; }
+.trophy-when { font-size: 15px; color: #555; }
+.trophy-rating { margin-top: 6px !important; }
+.stars { position: relative; display: inline-block; font-size: 24px; line-height: 1; vertical-align: -3px; color: #d8d8d8; letter-spacing: 1px; }
+.stars-fill { position: absolute; left: 0; top: 0; overflow: hidden; white-space: nowrap; color: #ffb300; text-shadow: 1px 1px 0 #8a5a00; }
+.verdict { margin: 8px 0 6px !important; padding: 8px 12px; background: #ffffcc; border: 2px dashed #c8a600; font: italic 18px 'Comic Sans MS', 'Comic Neue', cursive; }
+.verdict span { font-style: normal; font-size: 14px; color: #800080; }
+
 /* members */
 .roster {
   list-style: none; padding: 0; margin: 0;
@@ -285,6 +323,7 @@ canvas.pix { image-rendering: pixelated; image-rendering: crisp-edges; }
   .gs { padding: 10px 10px; }
   .logo { font-size: 22px; }
   .opts { grid-template-columns: 1fr; }
+  .gb th { width: 72px; font-size: 15px; }
   .rtext { font-size: 23px; }
 }
 @media (prefers-reduced-motion: reduce) {
