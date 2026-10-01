@@ -1,189 +1,218 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Lake Effect Book Club</title>
-  <meta name="description" content="A Cleveland book club for the long winter. One book a month, picked by shaking the snow globe.">
-  <meta property="og:title" content="Lake Effect Book Club">
-  <meta property="og:description" content="A Cleveland book club for the long winter. One book a month, picked by shaking the snow globe.">
-  <meta name="theme-color" content="#0e2233">
-  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%E2%9D%84%EF%B8%8F%3C/text%3E%3C/svg%3E">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <!-- Separate links so one font failing never blocks the other. -->
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@600;700;800&display=swap">
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Literata:ital,opsz,wght@0,7..72,400;0,7..72,600;1,7..72,400&display=swap">
-  <link rel="stylesheet" href="css/style.css">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>~*~ Lake Effect Book Club Home Page ~*~</title>
+<meta name="description" content="The OFFICIAL home page of the Lake Effect Book Club of Cleveland, Ohio!!! Now with PIZZA PAGES!">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%F0%9F%8D%95%3C/text%3E%3C/svg%3E">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=VT323&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Comic+Neue:wght@400;700&display=swap">
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <svg width="0" height="0" style="position:absolute" aria-hidden="true">
-    <symbol id="i-flake" viewBox="0 0 24 24">
-      <g fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round">
-        <path d="M12 12V2.6M9.3 4.7 12 7.2l2.7-2.5"/>
-        <path d="M12 12V2.6M9.3 4.7 12 7.2l2.7-2.5" transform="rotate(60 12 12)"/>
-        <path d="M12 12V2.6M9.3 4.7 12 7.2l2.7-2.5" transform="rotate(120 12 12)"/>
-        <path d="M12 12V2.6M9.3 4.7 12 7.2l2.7-2.5" transform="rotate(180 12 12)"/>
-        <path d="M12 12V2.6M9.3 4.7 12 7.2l2.7-2.5" transform="rotate(240 12 12)"/>
-        <path d="M12 12V2.6M9.3 4.7 12 7.2l2.7-2.5" transform="rotate(300 12 12)"/>
-      </g>
-    </symbol>
-  </svg>
 
-  <div class="demo-bar" id="demoBar" hidden></div>
+<div id="snowfall" aria-hidden="true"></div>
 
-  <header class="top">
-    <a class="brand" href="#top">
-      <svg class="brand-flake" aria-hidden="true"><use href="#i-flake"/></svg>
-      <span class="brand-name" data-club-name>Lake Effect Book Club</span>
-    </a>
-    <nav class="top-nav" aria-label="Sections">
-      <a href="#notes" id="navNotes" hidden>Notes</a>
-      <a href="#snowbank">Snowbank</a>
-      <a href="#freeze">Deep Freeze</a>
-    </nav>
-  </header>
+<!-- ======================= HEADER ======================= -->
+<div class="header">
+  <div class="construction" aria-hidden="true"><span>UNDER CONSTRUCTION</span></div>
+  <h1 class="wordart" id="wordart">Lake Effect Book Club</h1>
+  <p class="subtitle">~*~ The OFFICIAL Home Page of Cleveland's Coziest Book Club ~*~</p>
+  <marquee class="ticker" scrollamount="5">
+    *** WELCOME TO THE LAKE EFFECT BOOK CLUB HOME PAGE!!! *** WE ARE READING <b>STONER</b> BY JOHN WILLIAMS *** PLAY <b>PIZZA PAGES</b> AND EARN PIZZA FOR READING!!! *** BUNDLE UP, IT'S COLD OUT THERE *** THANK YOU FOR VISITING!!! ***
+  </marquee>
+</div>
 
-  <section class="hero" id="top">
-    <div class="hero-inner">
-      <div class="hero-head">
-        <h1 class="club-name" data-club-name>Lake Effect Book Club</h1>
-        <p class="hero-intro" id="clubIntro"></p>
-      </div>
+<div class="page">
 
-      <div class="hero-globe">
-        <div class="globe-wrap" id="globeWrap">
-          <button class="globe" id="globe" type="button" aria-label="Shake the snow globe to pick a book">
-            <span class="globe-city" id="globeCity"></span>
-            <canvas id="globeCanvas"></canvas>
-            <span class="globe-title" id="globeTitle" aria-hidden="true"></span>
-            <span class="globe-glass"></span>
-          </button>
-          <div class="globe-base" aria-hidden="true"><span>Cleveland, Ohio</span></div>
-        </div>
-        <button class="btn btn-sodium btn-big" id="shakeBtn" type="button">Shake the globe</button>
-        <div class="draw-result" id="drawResult" aria-live="polite" hidden></div>
-      </div>
-
-      <div class="now" id="nowPanel" aria-live="polite">
-        <p class="now-loading">Scraping the ice off the windshield…</p>
-      </div>
+  <!-- ======================= SIDEBAR ======================= -->
+  <aside class="sidebar">
+    <div class="box nav">
+      <p class="box-title">~ NAVIGATION ~</p>
+      <a href="#meeting">&raquo; Next Meeting</a>
+      <a href="#book">&raquo; Our Book</a>
+      <a href="#members">&raquo; Members</a>
+      <a href="#pizza">&raquo; PIZZA PAGES <span class="new">NEW!</span></a>
+      <a href="#links">&raquo; Cool Links</a>
     </div>
-  </section>
 
-  <main>
-    <section class="section notes-section" id="notes" hidden>
-      <div class="wrap">
-        <div class="section-head">
-          <h2 id="notesHeading">Notes</h2>
-          <p>Drop a thought whenever something hits you. Sign it or don’t. We’ll go through them together at the next gathering.</p>
-        </div>
-        <div class="notes-layout">
-          <form class="composer" id="noteForm" novalidate>
-            <label class="field">
-              <span>Your thought</span>
-              <textarea name="text" rows="5" maxlength="4000" required placeholder="The chapter where…"></textarea>
-            </label>
-            <div class="field-row">
-              <label class="field">
-                <span>How far in</span>
-                <select name="progress">
-                  <option value="">Not saying</option>
-                </select>
-              </label>
-              <label class="field">
-                <span>Name <em>optional</em></span>
-                <input name="name" maxlength="60" placeholder="Anonymous" autocomplete="nickname">
-              </label>
-            </div>
-            <fieldset class="field">
-              <legend>Rating so far <em>optional</em></legend>
-              <div class="rate-picker" id="ratePicker" role="group" aria-label="Rating so far"></div>
-            </fieldset>
-            <label class="check">
-              <input type="checkbox" name="spoiler">
-              <span>Has spoilers <em>blurred until someone taps it</em></span>
-            </label>
-            <button class="btn btn-sodium" type="submit">Post note</button>
-          </form>
-          <div class="feed" id="feed"></div>
-        </div>
-      </div>
-    </section>
-
-    <section class="section snowbank" id="snowbank">
-      <div class="wrap">
-        <div class="section-head">
-          <h2>The Snowbank</h2>
-          <p>Every book that could come out of the globe. Add one and it’s in the running for the next shake.</p>
-        </div>
-        <div class="bank-layout">
-          <div class="bank-main">
-            <div class="chips" id="genreChips" role="group" aria-label="Filter by genre"></div>
-            <ul class="bank-list" id="bankList"><li class="bank-empty">Loading the Snowbank…</li></ul>
-          </div>
-          <aside class="bank-side">
-            <form class="panel suggest" id="suggestForm" novalidate>
-              <h3>Suggest a book</h3>
-              <label class="field"><span>Title</span><input name="title" maxlength="200" required></label>
-              <label class="field"><span>Author</span><input name="author" maxlength="120"></label>
-              <label class="field"><span>Genre</span><input name="genres" maxlength="120" list="genreOptions" placeholder="Sci-fi, History…"></label>
-              <datalist id="genreOptions"></datalist>
-              <label class="field"><span>Why this one <em>optional</em></span><textarea name="why" rows="3" maxlength="600"></textarea></label>
-              <label class="field"><span>Your name <em>optional</em></span><input name="suggestedBy" maxlength="60" placeholder="Anonymous" autocomplete="nickname"></label>
-              <button class="btn btn-sodium" type="submit">Add to the Snowbank</button>
-            </form>
-            <div class="tastes">
-              <h3>What we’re into</h3>
-              <p class="tastes-note">From everyone’s favorite-genre answers. Each flake is one member.</p>
-              <ul id="tasteList"></ul>
-            </div>
-          </aside>
-        </div>
-
-        <div class="stuck" id="stuck" hidden>
-          <h3>Books that stuck with us</h3>
-          <p id="stuckIntro"></p>
-          <div class="shelf" id="shelf"></div>
-          <p class="shelf-detail" id="shelfDetail" aria-live="polite">Tap a spine to see what it is.</p>
-        </div>
-      </div>
-    </section>
-
-    <section class="section freeze" id="freeze">
-      <div class="wrap">
-        <div class="section-head">
-          <h2>The Deep Freeze</h2>
-          <p>Every book we’ve finished, kept on ice with its notes, the verdict, and the group’s final rating.</p>
-        </div>
-        <ol class="timeline" id="timeline"></ol>
-      </div>
-    </section>
-  </main>
-
-  <footer class="foot">
-    <div class="wrap foot-inner">
-      <p><span data-club-name>Lake Effect Book Club</span>. Reading advisory in effect until the lake thaws.</p>
-      <button class="linkish" id="organizerBtn" type="button">Organizer</button>
+    <div class="box midi">
+      <p class="box-title">&#9835; Now Playing &#9835;</p>
+      <p class="midi-name">fur_elise.mid</p>
+      <button type="button" id="midiBtn" class="bevel">&#9654; PLAY</button>
     </div>
-  </footer>
 
-  <div class="scrim" id="scrim" hidden></div>
-  <aside class="drawer" id="drawer" role="dialog" aria-modal="true" aria-labelledby="drawerTitle" hidden>
-    <div class="drawer-head">
-      <h2 id="drawerTitle">Organizer</h2>
-      <button class="icon-btn" id="drawerClose" type="button" aria-label="Close organizer tools">&times;</button>
+    <div class="box counter-box">
+      <p class="box-title">You have visited<br>this page</p>
+      <div class="odometer" id="odometer">000000</div>
+      <p class="tiny">times! (from this computer)</p>
     </div>
-    <div class="drawer-body" id="drawerBody"></div>
+
+    <div class="badges" aria-label="Web badges">
+      <span class="badge b1">BEST VIEWED<br>800 x 600</span>
+      <span class="badge b2">I &hearts;<br>BOOKS</span>
+      <span class="badge b3">LAKE ERIE<br>ROCKS!</span>
+      <span class="badge b4">PIZZA<br>POWERED</span>
+      <span class="badge b5">Y2K READY?<br>NOT YET</span>
+    </div>
   </aside>
 
-  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+  <!-- ======================= MAIN ======================= -->
+  <main class="main">
 
-  <noscript><p class="noscript">This site needs JavaScript to shake the snow globe.</p></noscript>
+    <div class="box welcome">
+      <h2>Hello and WELCOME!!!</h2>
+      <p>Welcome to our little corner of the <b>World Wide Web</b>! This is the place to find out when we're meeting, what we're reading, and who's in the club. Please make yourself at home, and remember: <i>a book a month keeps the cabin fever away!</i></p>
+      <p>Don't forget to play <a href="#pizza"><b>PIZZA PAGES</b></a> at the bottom of the page. Read for 5 minutes and earn a slice. That's the deal!!</p>
+      <!-- EDIT: change the webmaster's name below if you like -->
+      <p class="signed">~ Mrs. Kowalski, Webmaster &amp; Retired 8th Grade English Teacher &#127822;</p>
+    </div>
 
-  <script src="js/config.js"></script>
-  <script src="js/store.js"></script>
-  <script src="js/seed.js"></script>
-  <script src="js/app.js"></script>
+    <hr class="rainbow">
+
+    <!-- ======================= NEXT MEETING ======================= -->
+    <div class="box" id="meeting">
+      <h2><span class="blink">&#9733;</span> NEXT OFFICIAL MEETING <span class="blink">&#9733;</span></h2>
+
+      <!-- ======================================================
+           EDIT THE NEXT MEETING HERE
+           1. Change the words between <time ...> and </time>
+           2. ALSO change the date inside datetime="..." so the
+              countdown works. Format: YEAR-MONTH-DAYTHOUR:MINUTE
+              using 24-hour time. 7:00 PM = 19:00
+              Example: datetime="2026-11-05T19:00"
+           3. Change the location line under it.
+           ====================================================== -->
+      <p class="meeting-when"><time id="meetingTime" datetime="2026-11-05T19:00">Thursday, November 5th, 2026 at 7:00 PM</time></p>
+      <p class="meeting-where"><b>Where:</b> Location to be announced. Watch your e-mail!!</p>
+      <!-- ============ END OF MEETING SECTION ============ -->
+
+      <p class="countdown" id="countdown"></p>
+      <p class="tiny">Bring snacks. Bring your book. Bring a friend (ask first)!</p>
+    </div>
+
+    <hr class="rainbow">
+
+    <!-- ======================= THE BOOK ======================= -->
+    <div class="box" id="book">
+      <h2>&#128218; BOOK OF THE MONTH &#128218;</h2>
+      <div class="book-row">
+        <div class="pixel-book" aria-hidden="true">
+          <span>STONER</span>
+          <small>J. WILLIAMS</small>
+        </div>
+        <div>
+          <p class="book-title"><i>Stoner</i></p>
+          <p class="book-author">by John Williams (1965)</p>
+          <p>William Stoner is a Missouri farm boy who goes off to the university to study agriculture, and instead falls head over heels for <b>literature</b>. This quiet little novel didn't sell much when it first came out, but decades later readers rediscovered it and it became a surprise international bestseller. It's proof that good books can wait for us!</p>
+        </div>
+      </div>
+
+      <div class="teacher-note">
+        <p class="note-head">&#9999;&#65039; TEACHER'S NOTE</p>
+        <p>Early in the book, Stoner's English professor reads Shakespeare's <b>Sonnet 73</b> to the class and asks him what it means, and it changes his whole life! Here it is so you can see what all the fuss is about:</p>
+        <blockquote class="sonnet">That time of year thou mayst in me behold
+When yellow leaves, or none, or few, do hang
+Upon those boughs which shake against the cold,
+Bare ruin'd choirs, where late the sweet birds sang.
+In me thou see'st the twilight of such day
+As after sunset fadeth in the west,
+Which by and by black night doth take away,
+Death's second self, that seals up all in rest.
+In me thou see'st the glowing of such fire
+That on the ashes of his youth doth lie,
+As the death-bed whereon it must expire,
+Consum'd with that which it was nourish'd by.
+This thou perceiv'st, which makes thy love more strong,
+To love that well which thou must leave ere long.</blockquote>
+      </div>
+
+      <p class="q-head"><b>Things to think about while you read</b> (no spoilers, promise!)</p>
+      <ol class="questions">
+        <li>When Stoner can't answer his professor's question about the sonnet, why do you think that moment hits him so hard?</li>
+        <li>Have you ever had a moment that sent your life off in a different direction?</li>
+        <li>John Williams writes in a very plain, quiet style. Does it work for you?</li>
+      </ol>
+    </div>
+
+    <hr class="rainbow">
+
+    <!-- ======================= MEMBERS ======================= -->
+    <div class="box" id="members">
+      <h2>&#128101; MEET THE MEMBERS &#128101;</h2>
+      <p class="center" id="memberCount"></p>
+
+      <!-- ======================================================
+           EDIT THE MEMBER LIST HERE
+           One person per line, like this:   <li>Jane Doe</li>
+           To add someone: copy a whole line, paste it on a new
+           line, and change the name. To remove someone: delete
+           their whole line.
+           ====================================================== -->
+      <ul class="roster" id="memberList">
+        <li>Member Name #1</li>
+        <li>Member Name #2</li>
+        <li>Member Name #3</li>
+        <li>Member Name #4</li>
+      </ul>
+      <!-- ============ END OF MEMBER LIST ============ -->
+
+    </div>
+
+    <hr class="rainbow">
+
+    <!-- ======================= PIZZA PAGES ======================= -->
+    <div class="box pizza-box" id="pizza">
+      <h2>&#127829; PIZZA PAGES &#127829;</h2>
+      <p class="center">The educational reading game! Read a <b>real classic</b> for <b>5 minutes</b>, pass the pop quiz, and earn a slice. Collect 8 slices for a whole pizza and a <b>certificate</b>!</p>
+
+      <div class="monitor">
+        <div class="screen" id="screen" tabindex="-1">
+          <noscript><p>Turn on JavaScript to play!</p></noscript>
+        </div>
+        <div class="monitor-chin">
+          <span class="brand">LAKE EFFECT EDUCATIONAL SOFTWARE</span>
+          <span class="power"><i></i> POWER</span>
+        </div>
+      </div>
+      <p class="tiny center">Tip: use the &larr; and &rarr; arrow keys to turn pages. Your slices are saved on this computer.</p>
+    </div>
+
+    <hr class="rainbow">
+
+    <!-- ======================= LINKS ======================= -->
+    <div class="box" id="links">
+      <h2>&#128279; COOL LINKS &#128279;</h2>
+      <ul class="links">
+        <li><a href="https://www.gutenberg.org/" target="_blank" rel="noopener">Project Gutenberg</a> - Tens of thousands of FREE classic books!! <span class="new">COOL!</span></li>
+        <li><a href="https://standardebooks.org/" target="_blank" rel="noopener">Standard Ebooks</a> - Free classics that look really nice</li>
+        <li><a href="https://cpl.org/" target="_blank" rel="noopener">Cleveland Public Library</a> - Get your library card today!</li>
+        <li><a href="https://cuyahogalibrary.org/" target="_blank" rel="noopener">Cuyahoga County Public Library</a> - Branches all over the county</li>
+      </ul>
+    </div>
+
+  </main>
+</div>
+
+<!-- ======================= FOOTER ======================= -->
+<div class="footer">
+  <p class="webring">
+    <a href="#" data-webring>&laquo; PREV</a> |
+    <b>~ Cleveland Book Club WebRing ~</b> |
+    <a href="#" data-webring>RANDOM</a> |
+    <a href="#" data-webring>NEXT &raquo;</a>
+  </p>
+  <p>This page is best viewed with <b>any web browser</b> at 800 x 600 resolution.</p>
+  <p>Last updated: <span id="lastUpdated"></span></p>
+  <p class="tiny">&copy; Lake Effect Book Club. All rights reserved. Please do not steal my graphics!!!</p>
+</div>
+
+<div class="cert-wrap" id="certWrap" hidden></div>
+
+<script src="library.js"></script>
+<script src="site.js"></script>
+<script src="game.js"></script>
 </body>
 </html>
