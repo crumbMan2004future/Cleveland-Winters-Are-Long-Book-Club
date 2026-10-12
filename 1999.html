@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>The Lake Effect Ledger: December 31, 1999</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%F0%9F%93%B0%3C/text%3E%3C/svg%3E">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=UnifrakturMaguntia&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,700&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Libre+Caslon+Text:ital,wght@0,400;0,700;1,400&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@500;700;800&display=swap">
+<style>
+  :root {
+    --paper: #f2ecda; --ink: #1b1a17; --ink-2: #4a463d; --rule: #2a2822; --soft: #b9b09a;
+    --head: 'Playfair Display', Georgia, 'Times New Roman', serif;
+    --body: 'Libre Caslon Text', Georgia, 'Times New Roman', serif;
+    --sans: 'Libre Franklin', 'Franklin Gothic Medium', Arial, sans-serif;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0; padding: 22px 12px 0; color: var(--ink); font: 16px/1.5 var(--body);
+    background: #33322f;
+  }
+  .paper {
+    max-width: 1120px; margin: 0 auto; padding: 22px clamp(14px, 3vw, 36px) 30px;
+    background-color: var(--paper);
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='220' height='220'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 .35 0 0 0 0 .3 0 0 0 0 .2 0 0 0 .09 0'/%3E%3C/filter%3E%3Crect width='220' height='220' filter='url(%23n)'/%3E%3C/svg%3E"),
+      linear-gradient(90deg, rgba(120,100,60,.08), transparent 8%, transparent 92%, rgba(120,100,60,.08));
+    box-shadow: 0 30px 60px -20px rgba(0,0,0,.7), 0 0 0 1px rgba(0,0,0,.25);
+  }
+
+  /* masthead */
+  .ears { display: grid; grid-template-columns: 1fr auto 1fr; align-items: center; gap: 16px; font: 500 12px/1.35 var(--sans); }
+  .ear { border: 1.5px solid var(--rule); padding: 6px 9px; max-width: 220px; }
+  .ear b { display: block; font-weight: 800; letter-spacing: .06em; text-transform: uppercase; font-size: 11px; }
+  .ear.r { justify-self: end; text-align: right; }
+  .flag {
+    margin: 4px 0 0; text-align: center; font: 400 clamp(46px, 9.5vw, 104px)/1 'UnifrakturMaguntia', 'Old English Text MT', var(--head);
+    letter-spacing: .01em;
+  }
+  .motto { text-align: center; font: italic 14px var(--body); color: var(--ink-2); margin: 2px 0 8px; }
+  .dateline {
+    display: flex; justify-content: space-between; gap: 10px; flex-wrap: wrap; padding: 5px 2px;
+    border-top: 3px double var(--rule); border-bottom: 3px double var(--rule);
+    font: 700 12px var(--sans); letter-spacing: .08em; text-transform: uppercase;
+  }
+
+  /* banner */
+  .kicker { margin: 18px 0 0; text-align: center; font: 800 13px var(--sans); letter-spacing: .3em; text-transform: uppercase; }
+  .banner {
+    margin: 2px 0 4px; text-align: center; text-transform: uppercase;
+    font: 900 clamp(38px, 8.2vw, 92px)/.95 var(--head); letter-spacing: -.01em;
+  }
+  .deck { margin: 8px auto 14px; max-width: 760px; text-align: center; font: italic 700 clamp(17px, 2.2vw, 22px)/1.3 var(--head); }
+
+  /* grid */
+  .front { display: grid; grid-template-columns: minmax(0, 2.05fr) minmax(0, 1fr); gap: 0 26px; border-top: 1px solid var(--rule); padding-top: 14px; }
+  .side { border-left: 1px solid var(--rule); padding-left: 22px; }
+  .row { display: grid; gap: 0 22px; border-top: 3px double var(--rule); margin-top: 18px; padding-top: 14px; }
+  .row.three { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+  .row > * + * { border-left: 1px solid var(--rule); padding-left: 22px; }
+  .cols2 { column-count: 2; column-gap: 24px; column-rule: 1px solid var(--soft); }
+
+  p { margin: 0 0 .7em; text-align: justify; hyphens: auto; }
+  .lede::first-letter { float: left; font: 900 4.1em/.8 var(--head); padding: .06em .08em 0 0; }
+  .dl { font: 800 12px var(--sans); letter-spacing: .06em; text-transform: uppercase; }
+  .by { margin: 0 0 8px; font: 700 11px var(--sans); letter-spacing: .1em; text-transform: uppercase; color: var(--ink-2); }
+  h2 { margin: 0 0 6px; font: 900 clamp(24px, 2.6vw, 31px)/1.05 var(--head); }
+  h3 { margin: 0 0 6px; font: 900 21px/1.1 var(--head); }
+  .sub { margin: 0 0 8px; font: italic 17px/1.3 var(--body); color: var(--ink-2); text-align: left; }
+  .pull {
+    margin: 10px 0 12px; padding: 10px 0; border-top: 3px solid var(--rule); border-bottom: 1px solid var(--rule);
+    font: italic 700 22px/1.25 var(--head); text-align: center; break-inside: avoid;
+  }
+  .pull small { display: block; margin-top: 6px; font: 700 11px var(--sans); letter-spacing: .1em; text-transform: uppercase; font-style: normal; }
+  .jump { font: 700 12px var(--sans); text-transform: uppercase; letter-spacing: .06em; }
+
+  figure { margin: 0 0 12px; break-inside: avoid; }
+  figure svg { display: block; width: 100%; height: auto; border: 1px solid var(--rule); }
+  figcaption { margin-top: 5px; font: 12px/1.4 var(--sans); color: var(--ink-2); }
+  figcaption b { color: var(--ink); }
+
+  /* sidebar boxes */
+  .box { border: 2px solid var(--rule); padding: 12px 14px; margin-bottom: 16px; }
+  .box h3 { text-align: center; }
+  .count { text-align: center; }
+  .count .label { font: 800 11px var(--sans); letter-spacing: .2em; text-transform: uppercase; }
+  .clock { font: 900 clamp(40px, 5vw, 56px)/1 var(--head); font-variant-numeric: tabular-nums; margin: 6px 0; }
+  .clock.flash { color: #8b1a1a; }
+  .count .note { min-height: 2.8em; margin: 0; font: italic 13px/1.4 var(--body); text-align: center; color: var(--ink-2); }
+  .checks { list-style: none; margin: 0; padding: 0; font: 15px/1.45 var(--body); }
+  .checks li { padding: 3px 0 3px 26px; position: relative; border-bottom: 1px dotted var(--soft); }
+  .checks li::before { content: '\2610'; position: absolute; left: 2px; top: 1px; font-size: 18px; }
+  .checks li.done::before { content: '\2611'; }
+  .big-num { font: 900 46px/1 var(--head); text-align: center; margin: 4px 0; }
+
+  /* horoscope + classifieds */
+  .horo dt { font: 800 12px var(--sans); letter-spacing: .1em; text-transform: uppercase; margin-top: 6px; }
+  .horo dd { margin: 0; font: 15px/1.4 var(--body); }
+  .classifieds { border-top: 3px double var(--rule); margin-top: 18px; padding-top: 10px; }
+  .classifieds > h3 { text-align: center; font-size: 26px; letter-spacing: .12em; text-transform: uppercase; }
+  .ads { column-count: 4; column-gap: 16px; column-rule: 1px solid var(--soft); }
+  .ad { break-inside: avoid; margin: 0 0 10px; padding-bottom: 8px; border-bottom: 1px solid var(--soft); font: 13px/1.35 var(--sans); }
+  .ad b { display: block; font-weight: 800; text-transform: uppercase; letter-spacing: .04em; }
+  .ad.boxed { border: 2px solid var(--rule); padding: 8px; text-align: center; }
+  .ad.boxed b { font: 900 18px var(--head); text-transform: none; letter-spacing: 0; }
+
+  .sources { margin-top: 16px; padding: 10px 14px; border: 1px solid var(--rule); font: 13px/1.5 var(--sans); }
+  .sources b { text-transform: uppercase; letter-spacing: .08em; }
+  .sources p { text-align: left; margin: 0 0 .4em; }
+
+  /* the way back */
+  .present {
+    max-width: 1120px; margin: 0 auto; padding: 34px 16px 46px; text-align: center; color: #e9e3d2;
+    font: 15px/1.6 var(--body);
+  }
+  .present blockquote { margin: 0 auto 6px; max-width: 640px; font: italic 20px/1.4 var(--head); }
+  .present p { text-align: center; }
+  .present cite { display: block; margin-bottom: 24px; font: 12px var(--sans); letter-spacing: .08em; text-transform: uppercase; font-style: normal; color: #b8b09c; }
+  .present a {
+    display: inline-block; margin: 6px; padding: 9px 18px; color: #e9e3d2; text-decoration: none;
+    border: 1px solid #b8b09c; font: 700 13px var(--sans); letter-spacing: .1em; text-transform: uppercase;
+  }
+  .present a:hover, .present a:focus-visible { background: #e9e3d2; color: #222; outline: none; }
+
+  @media (max-width: 900px) {
+    .front { grid-template-columns: 1fr; }
+    .side { border-left: 0; padding-left: 0; border-top: 1px solid var(--rule); padding-top: 14px; margin-top: 8px; }
+    .row.three { grid-template-columns: 1fr; }
+    .row > * + * { border-left: 0; padding-left: 0; border-top: 1px solid var(--rule); padding-top: 14px; margin-top: 10px; }
+    .ads { column-count: 2; }
+  }
+  @media (max-width: 560px) {
+    .ears { grid-template-columns: 1fr 1fr; }
+    .ears .mid { display: none; }
+    .cols2 { column-count: 1; }
+    .ads { column-count: 1; }
+    p { text-align: left; }
+  }
+  @media print {
+    body { background: #fff; padding: 0; }
+    .paper { box-shadow: none; }
+    .present { display: none; }
+  }
+</style>
+</head>
+<body>
+
+<article class="paper">
+  <header>
+    <div class="ears">
+      <div class="ear"><b>Weather</b>Flurries off the lake, high in the 30s. 100% chance of optimism.</div>
+      <div class="mid" aria-hidden="true"></div>
+      <div class="ear r"><b>Inside</b>Your life in 2009, A6 &middot; Y2K checklist, A3 &middot; Classifieds, D1</div>
+    </div>
+    <h1 class="flag">The Lake Effect Ledger</h1>
+    <p class="motto">&ldquo;All the News That Fits Before Midnight&rdquo;</p>
+    <div class="dateline">
+      <span>Cleveland, Ohio</span>
+      <span>Friday, December 31, 1999</span>
+      <span>Millennium Eve Edition</span>
+      <span>50&cent;</span>
+    </div>
+  </header>
+
+  <p class="kicker">Goodbye, 1900s</p>
+  <h2 class="banner">The Future Starts at Midnight</h2>
+  <p class="deck">As the century takes its final bow, America toasts a new millennium that promises to be faster, smarter and more connected than anyone ever imagined</p>
+
+  <div class="front">
+    <section aria-label="Lead story">
+      <p class="by">By the Ledger Staff</p>
+      <div class="cols2">
+        <p class="lede"><span class="dl">Washington &mdash;</span> The 20th century has less than a day left to live, and almost nobody is sad to see it go.</p>
+        <p>President Clinton opened the nation&rsquo;s official Millennium celebration on the National Mall this morning. The light may be fading on the old century, he told the crowd, but &ldquo;the Sun is still rising on America.&rdquo;</p>
+        <p>The White House Millennium Council gave the weekend a theme that suits the mood from coast to coast: honor the past, imagine the future.</p>
+        <figure>
+          <svg viewBox="0 0 600 360" role="img" aria-label="Illustration: the numerals 2000 rising like a sun behind a city skyline on the lake">
+            <defs>
+              <pattern id="dots" width="7" height="7" patternUnits="userSpaceOnUse"><circle cx="3.5" cy="3.5" r="1.5" fill="#1b1a17" opacity=".45"/></pattern>
+              <pattern id="dots2" width="5" height="5" patternUnits="userSpaceOnUse"><circle cx="2.5" cy="2.5" r="1.4" fill="#1b1a17" opacity=".7"/></pattern>
+              <clipPath id="sky"><rect width="600" height="270"/></clipPath>
+            </defs>
+            <rect width="600" height="360" fill="#ebe4cf"/>
+            <rect width="600" height="270" fill="url(#dots)" opacity=".35"/>
+            <g clip-path="url(#sky)">
+              <g stroke="#1b1a17" stroke-width="2" opacity=".55">
+                <line x1="300" y1="270" x2="-40" y2="60"/><line x1="300" y1="270" x2="20" y2="0"/><line x1="300" y1="270" x2="110" y2="-20"/>
+                <line x1="300" y1="270" x2="205" y2="-20"/><line x1="300" y1="270" x2="300" y2="-20"/><line x1="300" y1="270" x2="395" y2="-20"/>
+                <line x1="300" y1="270" x2="490" y2="-20"/><line x1="300" y1="270" x2="580" y2="0"/><line x1="300" y1="270" x2="640" y2="60"/>
+                <line x1="300" y1="270" x2="-40" y2="170"/><line x1="300" y1="270" x2="640" y2="170"/>
+              </g>
+              <circle cx="300" cy="270" r="150" fill="#ebe4cf" stroke="#1b1a17" stroke-width="3"/>
+              <circle cx="300" cy="270" r="136" fill="none" stroke="#1b1a17" stroke-width="1" stroke-dasharray="3 5"/>
+            </g>
+            <text x="300" y="226" text-anchor="middle" font-family="Playfair Display, Georgia, serif" font-weight="900" font-size="84" fill="#1b1a17">2000</text>
+            <g fill="#1b1a17">
+              <rect x="18" y="230" width="34" height="40"/><rect x="56" y="210" width="24" height="60"/><rect x="84" y="238" width="40" height="32"/>
+              <path d="M134 270v-80h6v-14h6v-14h4l4-10 4 10h4v14h6v14h6v80z"/>
+              <rect x="180" y="236" width="20" height="34"/><rect x="204" y="250" width="44" height="20"/>
+              <rect x="352" y="252" width="40" height="18"/>
+              <path d="M398 270v-96l13-13 13 13v96z"/><rect x="410" y="148" width="2" height="16"/>
+              <rect x="430" y="226" width="28" height="44"/><rect x="462" y="244" width="36" height="26"/>
+              <path d="M504 270l26-40 26 40z"/><rect x="562" y="236" width="34" height="34"/>
+            </g>
+            <rect y="270" width="600" height="90" fill="url(#dots2)"/>
+            <g stroke="#ebe4cf" stroke-width="2" opacity=".9">
+              <line x1="70" y1="292" x2="150" y2="292"/><line x1="220" y1="306" x2="380" y2="306"/><line x1="440" y1="296" x2="540" y2="296"/>
+              <line x1="120" y1="326" x2="250" y2="326"/><line x1="330" y1="340" x2="470" y2="340"/>
+            </g>
+          </svg>
+          <figcaption><b>THE ODOMETER OF HISTORY</b> rolls over tonight. (Ledger illustration)</figcaption>
+        </figure>
+        <p>The centerpiece of the weekend is a National Millennium Time Capsule, packed with objects that shaped the American century. Among them: Louis Armstrong&rsquo;s trumpet, a piece of the Berlin Wall and a transistor, the tiny switch that set off the information age. It won&rsquo;t be opened for another hundred years.</p>
+        <p>Here on the North Coast, folks are bundling up for a night by the lake, with one eye on the clock and the other on the furnace. <span class="jump">(See Y2K, A3)</span></p>
+        <p>And what comes after midnight? Ask around and you&rsquo;ll hear the same word again and again: <i>connected</i>. Computers in every home. Libraries on every desk. Friends on the other side of the world, a click away. If the 1900s were the century of the car and the airplane, the 2000s look like the century of the network.</p>
+        <div class="pull">&ldquo;The Sun is still rising on America.&rdquo;<small>President Clinton, this morning</small></div>
+        <p>One hundred years ago tonight, President Clinton noted in remarks this afternoon, sending a text by telegraph took six seconds. Tomorrow, a message can circle the planet before you finish your toast.</p>
+        <p>Happy New Year, Cleveland. See you on the other side.</p>
+      </div>
+    </section>
+
+    <aside class="side" aria-label="Sidebar">
+      <div class="box count">
+        <p class="label">Time left in the 1900s</p>
+        <p class="clock" id="clock" aria-live="off">00:00:59</p>
+        <p class="note" id="clockNote">Get your noisemakers ready!</p>
+      </div>
+
+      <div class="box">
+        <h3>Your Y2K Checklist</h3>
+        <ul class="checks">
+          <li class="done">Fill the bathtub with water</li>
+          <li class="done">Flashlight and fresh batteries</li>
+          <li class="done">Print out your bank balance</li>
+          <li class="done">A little cash in the cookie jar</li>
+          <li>Set the VCR clock (nobody ever has)</li>
+          <li>Relax. Experts have spent years fixing this.</li>
+        </ul>
+      </div>
+
+      <div class="box">
+        <h3>By 2029&hellip;</h3>
+        <div class="big-num">1,000</div>
+        <p style="text-align:center">human brains&rsquo; worth of computing power for about $1,000. That&rsquo;s inventor Ray Kurzweil&rsquo;s forecast in his new book. He also expects machines to say they&rsquo;re conscious by then, and predicts most of us will believe them.</p>
+      </div>
+    </aside>
+  </div>
+
+  <div class="row three">
+    <section>
+      <p class="by">Technology</p>
+      <h2>&lsquo;Information Superhighway&rsquo; Will Bring the World Together</h2>
+      <p class="sub">The network once pitched as a global town square is about to reach your living room</p>
+      <p>When Vice President Al Gore laid out his plan for a Global Information Infrastructure before the world&rsquo;s telecommunications leaders in Buenos Aires in 1994, he promised it would help educate children, let people trade ideas across borders and open up a worldwide marketplace.</p>
+      <p>He went further. The network, he said, would spread participatory democracy around the globe.</p>
+      <div class="pull">&ldquo;I see a new Athenian Age of democracy forged in the fora the GII will create.&rdquo;<small>Vice President Gore, 1994</small></div>
+      <p>Five and a half years later, the World Wide Web is everywhere you look: on billboards, on cereal boxes, at the end of the evening news. Tonight, millions of people will share the arrival of 2000 with strangers in chat rooms around the world. The town square has gone global.</p>
+    </section>
+
+    <section>
+      <p class="by">The Next Ten Years</p>
+      <h2>Your Life in 2009</h2>
+      <p class="sub">Talking computers, smart clothes and a gadget that does everything: two of the decade&rsquo;s big thinkers sketch what&rsquo;s next</p>
+      <p>Inventor Ray Kurzweil&rsquo;s new book, <i>The Age of Spiritual Machines</i>, takes a crack at 2009. His picture: computers so small they disappear into our clothing and jewelry, keyboards giving way to conversation as we simply talk to our machines, and screens built right into eyeglasses. Pocket-sized machines will read printed pages aloud to blind readers, he writes, while &ldquo;listening machines&rdquo; turn speech into text for the deaf.</p>
+      <p>Microsoft&rsquo;s Bill Gates, in his own 1999 book, <i>Business @ the Speed of Thought</i>, imagines people carrying small devices that keep them in touch wherever they go, checking the news, their flights and the markets on the move.</p>
+      <p>He also predicts services that compare prices across many websites at once, private websites where families and friends chat and plan get-togethers, and video feeds that let you check on your house while you&rsquo;re away.</p>
+      <p><i>Cars that drive themselves? Ask us again in 2010.</i></p>
+    </section>
+
+    <section>
+      <p class="by">Around Town</p>
+      <h3>Local Book Club Vows to Read Its Way Into 2000</h3>
+      <p>The Lake Effect Book Club says its first meeting of the new millennium will go on as planned, power or no power. &ldquo;Bring your book and a flashlight,&rdquo; advised Mrs. Kowalski, the club&rsquo;s webmaster, who has also built the club a home page on the World Wide Web. &ldquo;Some of us still read by candlelight anyway.&rdquo;</p>
+      <hr style="border:0;border-top:1px solid var(--rule);margin:14px 0">
+      <h3>Your Horoscope for the Year 2000</h3>
+      <dl class="horo">
+        <dt>All signs</dt>
+        <dd>A big year. Big changes. Back up your files.</dd>
+        <dt>Aries through Pisces</dt>
+        <dd>Someone will send you an e-mail forward. Do not forward it to ten friends.</dd>
+        <dt>Lucky numbers</dt>
+        <dd>2, 0, 0, 0</dd>
+      </dl>
+    </section>
+  </div>
+
+  <section class="classifieds" aria-label="Classifieds">
+    <h3>Classifieds</h3>
+    <div class="ads">
+      <p class="ad"><b>For sale</b>56K modem, barely used. Makes a very loud screech. Best offer.</p>
+      <p class="ad"><b>Free to good home</b>400 cans of beans, 30 gallons of bottled water. Y2K prep no longer needed (we hope). Pick up Jan. 2.</p>
+      <p class="ad boxed"><b>Get Online!</b>Unlimited Internet, just $19.95/month. Free setup CD in this paper (not really).</p>
+      <p class="ad"><b>Lost</b>VCR remote. Clock still blinking 12:00. Reward.</p>
+      <p class="ad"><b>Wanted</b>Patient grandchild to explain the &ldquo;Information Superhighway&rdquo; to Grandpa. Will pay in cookies.</p>
+      <p class="ad"><b>For sale</b>Pager, beeps when anyone needs you. Including weekends. Never again.</p>
+      <p class="ad boxed"><b>Party Supplies</b>2000-shaped glasses, horns, hats. Going fast! After tonight, half off.</p>
+      <p class="ad"><b>Seeking</b>Pen pal for e-mail. Must have own computer. Will reply within 3 to 5 business days.</p>
+      <p class="ad"><b>Services</b>Y2K consultant. Have checked my own toaster. Rates reasonable until midnight.</p>
+      <p class="ad"><b>For sale</b>Encyclopedia set, 26 volumes. Someone says the whole thing will fit on one disc someday.</p>
+    </div>
+  </section>
+
+  <div class="sources">
+    <p><b>Corrections &amp; Sources.</b> Every quotation in today&rsquo;s Ledger is real. President Clinton&rsquo;s remarks: opening of &ldquo;America&rsquo;s Millennium&rdquo; and the &ldquo;Millennium Around the World&rdquo; event, Washington, Dec. 31, 1999. Vice President Gore&rsquo;s remarks: World Telecommunication Development Conference, Buenos Aires, March 21, 1994. Time capsule items as reported by UPI, Dec. 31, 1999.</p>
+    <p>Predictions are summarized in our own words from Ray Kurzweil, <i>The Age of Spiritual Machines</i> (1999), and Bill Gates, <i>Business @ the Speed of Thought</i> (1999). Everything else in this edition, including the newspaper, the weather and Grandpa, is make-believe.</p>
+  </div>
+</article>
+
+<footer class="present">
+  <blockquote>&ldquo;We Americans must not fear change. Instead, let us welcome it, embrace it, and create it.&rdquo;</blockquote>
+  <cite>President Clinton, minutes before midnight, December 31, 1999</cite>
+  <p>You are visiting December 31, 1999. This is what tomorrow looked like from here.</p>
+  <a href="index.html">Return to the present</a>
+  <a href="y2k.html">Take the Y2K test again</a>
+</footer>
+
+<script>
+(function () {
+  'use strict';
+  var clock = document.getElementById('clock'), note = document.getElementById('clockNote');
+  var left = 59, loops = 0;
+  var NOTES = ['The clock skipped back. It’s still 1999.', 'Still 1999. Enjoy it while it lasts.', 'Midnight keeps not happening. Nobody seems to mind.'];
+  function show() { clock.textContent = '00:00:' + String(left).padStart(2, '0'); }
+  setInterval(function () {
+    if (left < 0) return;
+    if (left > 0) { left--; show(); if (left <= 10) note.textContent = left ? left + '...' : ''; return; }
+    clock.classList.add('flash');
+    clock.textContent = 'HAPPY NEW Y—';
+    setTimeout(function () {
+      clock.classList.remove('flash');
+      left = 59; show();
+      note.textContent = NOTES[loops++ % NOTES.length];
+    }, 1400);
+    left = -1;
+  }, 1000);
+  show();
+})();
+</script>
+</body>
+</html>
